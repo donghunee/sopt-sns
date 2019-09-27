@@ -1,15 +1,18 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import HeaderNav from './components/HeaderNav';
+import Posts from './components/Posts'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
+class App extends React.Component {
+  
+  render() {
+    return (
+      <div className="App container">
+        <HeaderNav />
+        <Posts />
+        <div className="container">
+          <button className="btn btn-default">Click Me</button>
+        </div>
         <a
           className="App-link"
           href="https://reactjs.org"
@@ -18,9 +21,9 @@ function App() {
         >
           Learn React
         </a>
-      </header>
-    </div>
-  );
+    </div>  
+    )
+  }
 }
 
 export default App;
